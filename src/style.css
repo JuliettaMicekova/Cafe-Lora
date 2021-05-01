@@ -252,6 +252,13 @@ nav a:hover {
   background-attachment: fixed;
 }
 
+.gallery-text {
+  background-color: #6e5f59;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
 .contacts {
   margin-bottom: 4rem;
 
