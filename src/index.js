@@ -1,5 +1,6 @@
 import './style.css';
 import { Layer } from './Layer/index';
+import './Layer/style.css';
 
 document.querySelector('#nav-btn').addEventListener('click', () => {
   document.querySelector('nav').classList.toggle('nav-closed');
