@@ -192,6 +192,7 @@ nav a:hover {
 
 .gallery-text {
   max-width: 30rem;
+  max-height: 20px;
   padding-top: 15rem;
   padding-bottom: 3rem;
   text-align: center;
@@ -220,11 +221,11 @@ nav a:hover {
   height: auto;
 }
 
-@media (min-width: 576px) {
+/* @media (min-width: 576px) {
   .drink {
     width: 50%;
   }
-}
+} */
 
 @media screen and (min-width: 768px) {
   .container {
@@ -265,7 +266,7 @@ nav a:hover {
     text-align: center;
   }
 
-  .drink {
+  /* .drink {
     width: 33.333%;
-  }
+  } */
 }
