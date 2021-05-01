@@ -154,7 +154,7 @@ nav a:hover {
   margin-bottom: 4rem;
 }
 
-.order-btn {
+/* .order-btn {
   padding: 0.5rem 1rem;
 
   color: white;
@@ -177,7 +177,7 @@ nav a:hover {
 
 .order-btn:active {
   background-color: #e67e51;
-}
+} */
 
 .gallery {
   padding-top: 0;

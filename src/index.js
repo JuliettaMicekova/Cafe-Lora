@@ -54,20 +54,63 @@ for (let i = 0; i < menuItemElm.length; i += 1) {
 //   layerElm.innerHTML += Layer(layers[i]);
 // }
 
-const drink = {
-  id: 'romano',
-  name: 'Romano',
-  ordered: false,
-  layers: [
-    {
-      color: '#fbdf5b',
-      label: 'citrón',
-    },
-    {
-      color: '#613916',
-      label: 'espresso',
-    },
-  ],
-};
+// const drink = {
+//   id: 'romano',
+//   name: 'Romano',
+//   ordered: false,
+//   layers: [
+//     {
+//       color: '#fbdf5b',
+//       label: 'citrón',
+//     },
+//     {
+//       color: '#613916',
+//       label: 'espresso',
+//     },
+//   ],
+// };
 
-document.querySelector('.drinks-list').appendChild(Drink(drink));
+const drinks = [
+  {
+    id: 'cappuccino',
+    name: 'Cappuccino',
+    ordered: false,
+    layers: [
+      {
+        color: '#feeeca',
+        label: 'mléčná pěna',
+      },
+      {
+        color: '#fed7b0',
+        label: 'teplé mléko',
+      },
+      {
+        color: '#613916',
+        label: 'espresso',
+      },
+    ],
+  },
+  {
+    id: 'romano',
+    name: 'Romano',
+    ordered: false,
+    layers: [
+      {
+        color: '#fbdf5b',
+        label: 'citrón',
+      },
+      {
+        color: '#613916',
+        label: 'espresso',
+      },
+    ],
+  },
+];
+const drinkListElm = document.querySelector('.drinks-list');
+// fetch('https://apps.kodim.cz/daweb/cafelora/api/drinks')
+// .then((response) =>response.json())
+//   .then((drinks)=>{(
+
+for (let i = 0; i < drinks.length; i += 1) {
+  drinkListElm.appendChild(Drink(drinks[i]));
+}

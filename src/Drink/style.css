@@ -40,6 +40,31 @@
   text-align: center;
 }
 
+.order-btn {
+  padding: 0.5rem 1rem;
+
+  color: white;
+  background-color: #ea946f;
+  border: none;
+  box-shadow: 0 0 5px #444;
+  border-radius: 1rem;
+
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.order-btn:hover {
+  transform: scale(1.1);
+}
+
+.order-btn:focus {
+  outline: none;
+}
+
+.order-btn:active {
+  background-color: #e67e51;
+}
+
 @media (min-width: 576px) {
   .drink {
     width: 50%;
