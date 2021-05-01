@@ -27,7 +27,7 @@ for (let i = 0; i < menuItemElm.length; i += 1) {
 // Ve chvíli, kdy máte objednávání funkční commitněte váš kód se smysluplnou zprávnou a pushněte jej.
 
 const orderBtnElm = document.querySelector('.order-btn');
-const drinCupElm = document.querySelector('.drink-cup');
+const drinCupElm = document.querySelector('.drink__cup');
 
 let ordered = false;
 orderBtnElm.addEventListener('click', () => {
@@ -37,7 +37,49 @@ orderBtnElm.addEventListener('click', () => {
     ordered = true;
   } else if (ordered === true) {
     orderBtnElm.textContent = 'Objednat';
-    orderBtnElm.classList.remove('drink_cup--selected');
+    drinCupElm.classList.remove('drink_cup--selected');
     ordered = false;
   }
 });
+
+// Každý nápoj bude obsahovat seznam ingrediencí. Na stránce vidíme příklad pro cappuccino. Budeme přepisovat kód tak, aby ingredience (vrstva) byla komponenta.
+
+// V hlavním souboru index.js vytvořte komponentu Layer, která očekává props v následujícím tvaru.
+// {
+//   color: '#feeeca',
+//   label: 'mléčná pěna',
+// }
+// Podívejte se do index.html na strukturu jednotlivých layers. Komponenta nechť vrací řetězec obsahující výsledné HTML pro jednu vrstvu. V index.html si jednotlivé ingredience pro capuccino (divy .layer) zakomentujte nebo smažte.
+// Použijte vaši komponentu a pomocí vlastnosti innerHTML zapojte do stránky tři dané ingredience pro cappuccino. Stránka by měla pro uživatele vypadat stejně jako na začátku.
+// Skvělá práce! Teď si komponentu Layer přesuneme do samostatné složky. Ve vašem projektu vytvořte pro vaši komponentu separátní složku s názvem Layer. V této složce bude index.js a style.css V souboru index.js bude JavaScriptový kód vaší komponenty. Kompnentu správně exportujte a správně ji importujte v hlavním index.js celého projektu. Vyzkoušejte, že váš projekt funguje.
+// Z hlavního souboru style.css přesuňte do CSS styly, které se týkají komponenty Layer do našeho nového style.css ve složce Layer. Nezapomeňte váš CSS soubor správně importovat do index.js aby jej Webpack zahrnul do výsledného sestavení.
+// Jakmile váš projekt funguje, commitněte váš kód s výborně napsanou commit zprávou a pushněte do vzdáleného repozitáře.
+
+// const layers = [
+//   {
+//     color: '#feeeca',
+//     label: 'mléčná pěna',
+//   },
+//   {
+//     color: '#fed7b0',
+//     label: 'teplé mléko',
+//   },
+//   {
+//     color: '#613916',
+//     label: 'espresso',
+//   },
+// ];
+
+const layerElm = document.querySelector('.drink__info');
+
+const Layer = (props) => {
+  return `<div class="layer">
+<div class="layer__color"
+  style="background-color:${props.color}></div>
+<div class="layer__label">${props.label}</div>
+</div>`;
+};
+
+layerElm.innerHTML += Layer({ color: '#feeeca', label: 'mléčná pěna' });
+layerElm.innerHTML += Layer({ color: '#fed7b0', label: 'teplé mléko' });
+layerElm.innerHTML += Layer({ color: '#613916', label: 'espresso' });
