@@ -1,6 +1,5 @@
 import './style.css';
 import { Drink } from './Drink/index';
-import './Layer/style.css';
 
 document.querySelector('#nav-btn').addEventListener('click', () => {
   document.querySelector('nav').classList.toggle('nav-closed');
@@ -30,7 +29,7 @@ for (let i = 0; i < menuItemElm.length; i += 1) {
 //   }
 // });
 
-const layerElm = document.querySelector('.drink__info');
+// const layerElm = document.querySelector('.drink__info');
 
 // layerElm.innerHTML += Layer({ color: '#feeeca', label: 'mléčná pěna' });
 // layerElm.innerHTML += Layer({ color: '#fed7b0', label: 'teplé mléko' });
