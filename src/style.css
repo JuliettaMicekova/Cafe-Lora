@@ -253,10 +253,18 @@ nav a:hover {
 }
 
 .gallery-text {
-  background-color: #6e5f59;
+  max-width: 30rem;
+  padding-top: 15rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.gallery-text p {
   text-align: center;
   font-size: 3rem;
   font-weight: 300;
+  text-shadow: aquamarine;
+  backdrop-filter: blur(20px);
 }
 
 .contacts {

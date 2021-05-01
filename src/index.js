@@ -2,6 +2,9 @@ import './style.css';
 
 console.log('funguju!');
 
-const navigation = document.querySelector('.nav-closed');
+const navBtnElm = document.querySelector('.nav-closed');
+const navElm = document.querySelector('nav');
 
-navigation.addEventListener('click');
+navBtnElm.addEventListener('click', () => {
+  navBtnElm.classList.toggle('nav-closed');
+});
