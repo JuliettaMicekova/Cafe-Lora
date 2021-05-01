@@ -12,10 +12,16 @@ document.querySelector('#nav-btn').addEventListener('click', () => {
   document.querySelector('nav').classList.toggle('nav-closed');
 });
 
-const menuElm = document.querySelectorAll('.nav-link');
+const menuItemElm = document.querySelectorAll('.nav-link');
 
 for (let i = 0; i < menuItemElm.length; i += 1) {
   menuItemElm[i].addEventListener('click', () => {
     document.querySelector('nav').classList.toggle('nav-closed');
   });
 }
+
+// Zařiďte, aby fungovalo objednání nápoje. Momentálně máme na stránce jeden nápoj, capuccino, později jich však bude mnohem více.
+
+// Na tlačíko se třídou order-btn pověste posluchač, při kliknutí změní nápis na tlačítku na Zrušit. Zároveň přidá na prvek se třídou drink__cup třídu drink__cup--selected.
+// Při opětovném kliknutí na tlačítko chceme zařídit, aby se objednávka zrušila a změny na prvku .drink__cup i na tlačítku .order-btn se vrátily (odebrala se třída drink__cup--selected a vrátil se text tlačítka na Objednat). Tohoto můžete docílit například tak, že si vytvoříte globální proměnnou ordered, která bude obsahovat true nebo false podle toho, zde je nápoj objednaný či nikoliv.
+// Ve chvíli, kdy máte objednávání funkční commitněte váš kód se smysluplnou zprávnou a pushněte jej.
